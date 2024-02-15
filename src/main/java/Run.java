@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Run {
@@ -59,26 +60,17 @@ public class Run {
         System.out.println("Size after clear: " + stack.size());
 
         // task 5
-        Map <String,Integer> map = new HashMap<>();
-        map.put("test",1);
-        map.put("tes",4);
-        map.put("te",7);
-        //System.out.println(map.get("test"));
+        MyHashMap<String,String> map = new MyHashMap<>();
+        map.put("Hi", "1");
+        map.put("Hey", "2");
+        map.put("Hello", "3");
 
-//        Потрібно робити за допомогою однозв'язної Node.
-//
-//        Не може зберігати дві ноди з однаковими ключами.
-//
-//        put(Object key, Object value) додає пару ключ + значення
-//        remove(Object key) видаляє пару за ключем
-//        clear() очищає колекцію
-//        get(Object key) повертає значення (Object value) за ключем
-
-
-
-
-
-
-
+        System.out.println(map.get("Hello"));
+        System.out.println(map.get("Hi"));
+        System.out.println("Size: " + map.size());
+        map.remove("Hi");
+        System.out.println(map.get("Hi")); //null
+        map.clear();
+        System.out.println("Size after clear: " + map.size());
     }
 }
